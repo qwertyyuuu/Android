@@ -18,5 +18,9 @@ class Fragment_B2 : Fragment(R.layout.fragment_b2) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentB2Binding.bind(view)
+        val textf = arguments?.getString("MyArg")
+        with(binding){
+            textView6.text = textf
+        }
     }
 }

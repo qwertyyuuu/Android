@@ -19,8 +19,20 @@ class Fragment_B : Fragment(R.layout.fragment_b) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentBBinding.bind(view)
         with(binding) {
+            val bundle = Bundle()
             button3.setOnClickListener{
+                val count = editText.text
+                bundle.putString("MyArg", count.toString())
+                val screenFragment = Fragment_B2.getInstance()
+                screenFragment.arguments = bundle
                 findNavController().navigate(R.id.action_fragment_B_to_fragment_B2)
+                parentFragmentManager
+                    .beginTransaction()
+                    .addToBackStack(null)
+                    .replace(R.id.containerView, screenFragment)
+                    .commit()
+
+
             }
 
         }
