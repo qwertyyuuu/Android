@@ -13,11 +13,12 @@ class Fragment_C : Fragment(R.layout.fragment_c) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentCBinding.bind(view)
+        (requireActivity() as? MainActivity)?.changeBottomNavigationVisibility(true)
         with(binding) {
             button4.setOnClickListener{
                 findNavController().navigate(R.id.action_fragment_C_to_fragment_C2)
             }
-
         }
+
     }
 }

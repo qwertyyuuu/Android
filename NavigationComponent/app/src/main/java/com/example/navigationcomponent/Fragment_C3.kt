@@ -12,5 +12,6 @@ class Fragment_C3 : Fragment(R.layout.fragment_c3) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentC3Binding.bind(view)
+        (requireActivity() as? MainActivity)?.changeBottomNavigationVisibility(true)
     }
 }
