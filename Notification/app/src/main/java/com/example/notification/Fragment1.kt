@@ -167,7 +167,7 @@ class Fragment1 : Fragment(R.layout.fragment1) {
 
         val pendingIntent = getPendingIntent(headerText, bodyText, detailsText)
 
-        totalTime = SystemClock.elapsedRealtime() + timeWhenShow * 1000
+        totalTime = (timeWhenShow * 1000).toLong()
 
         alarmManager?.set(
             AlarmManager.ELAPSED_REALTIME_WAKEUP,
