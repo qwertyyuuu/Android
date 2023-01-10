@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.homework11.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.homework11.RegistrationFragment"
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.homework11.BaseFragment"
+        android:label="BaseFragment" >
+        <action
+            android:id="@+id/action_baseFragment_to_checkboxFragment"
+            app:destination="@id/checkboxFragment" />
+        <action
+            android:id="@+id/action_baseFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkboxFragment"
+        android:name="com.example.homework11.CheckboxFragment"
+        android:label="CheckboxFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homework11.ProfileFragment"
+        android:label="ProfileFragment" />
+</navigation>
